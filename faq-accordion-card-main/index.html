@@ -1,119 +1,120 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&display=swap" rel="stylesheet">
-  <link href="style.css" rel="stylesheet  ">
-  <title>Frontend Mentor | FAQ Accordion Card</title>
-  <script src="script.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet  ">
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+    <script src="script.js"></script>
 
 </head>
 <body>
-  <div class="box">
+<div id="container" class="box">
 
-      <div class="top">
-        <img id="desktop" src="images/illustration-woman-online-mobile.svg">
-        <img id="bg" src="images/bg-pattern-desktop.svg">
+    <div class="mobile">
+        <img class="img-desktop" src="images/illustration-woman-online-mobile.svg">
+        <img class="img-bg" src="images/bg-pattern-mobile.svg">
+    </div>
 
-      </div>
+    <div class="desktop">
+        <div class="wrapper1">
+            <img class="img-desktop" src="images/illustration-woman-online-desktop.svg">
+
+        </div>
+        <div class="wrapper2">
+            <img class="img-bg" src="images/bg-pattern-desktop.svg">
+        </div>
+        <img id="img-box" class="img-box" src="images/illustration-box-desktop.svg">
+    </div>
+    <div class="q&a">
+        <div class="title">
+            <h1>FAQ</h1>
+        </div>
 
 
-      <div class="title">
-        <h1>FAQ</h1>
-      </div>
-
-        <div class="q&a">
-          <div class="text">
-           <div class="question" onclick="get_answer(1)">
+        <div class="question" onclick="get_answer(1)" onmouseover="orange('q1');move_cube('left')" onmouseout="neutral('q1');move_cube('right')">
             <div id="q1" class="q">
-              <h3>How many team members can I invite?</h3>
+                <h3>How many team members can I invite?</h3>
             </div>
-              <div class="arrow">
+            <div class="arrow">
                 <img id="arrow1" src="images/icon-arrow-down.svg">
-              </div>
             </div>
-            <div class="answer">
-              <div id="a1"></div>
-            </div>
-            <div class="line"></div>
-          </div>
         </div>
+        <div class="answer">
+            <div id="a1"></div>
+        </div>
+        <div class="line"></div>
 
-        <div class="q&a">
-          <div class="question" onclick="get_answer(2)">
+        <div class="question" onclick="get_answer(2)" onmouseover="orange('q2');move_cube('left')" onmouseout="neutral('q2');move_cube('right')">
             <div id="q2" class="q">
-              <h3>What is the maximum file upload size?</h3>
+                <h3>What is the maximum file upload size?</h3>
             </div>
 
             <div class="arrow">
-              <img id="arrow2" src="images/icon-arrow-down.svg">
+                <img id="arrow2" src="images/icon-arrow-down.svg">
             </div>
-          </div>
-          <div class="answer">
+        </div>
+        <div class="answer">
             <div id="a2"></div>
-          </div>
-          <div class="line"></div>
         </div>
+        <div class="line"></div>
 
 
-        <div class="q&a">
-          <div class="question" onclick="get_answer(3)">
+        <div class="question" onclick="get_answer(3)" onmouseover="orange('q3');move_cube('left')" onmouseout="neutral('q3');move_cube('right')">
             <div id="q3" class="q">
-              <h3>How do I reset my password?</h3>
+                <h3>How do I reset my password?</h3>
             </div>
             <div class="arrow">
-              <img id="arrow3"  src="images/icon-arrow-down.svg">
+                <img id="arrow3" src="images/icon-arrow-down.svg">
             </div>
-          </div>
-          <div class="answer">
+        </div>
+        <div class="answer">
             <div id="a3"></div>
-          </div>
-          <div class="line"></div>
         </div>
+        <div class="line"></div>
 
 
-        <div class="q&a">
-          <div class="question" role="button" onclick="get_answer(4)">
+        <div class="question" onclick="get_answer(4)" onmouseover="orange('q4');move_cube('left')" onmouseout="neutral('q4');move_cube('right')">
             <div id="q4" class="q">
-              <h3>Can I cancel my subscription?</h3>
+                <h3>Can I cancel my subscription?</h3>
             </div>
             <div class="arrow">
-              <img id="arrow4"  src="images/icon-arrow-down.svg">
+                <img id="arrow4" src="images/icon-arrow-down.svg">
             </div>
-          </div>
-          <div class="answer">
-            <div id="a4"></div></div>
-          <div class="line"></div>
         </div>
+        <div class="answer">
+            <div id="a4"></div>
+        </div>
+        <div class="line"></div>
 
 
-        <div class="q&a">
-          <div class="question" onclick="get_answer(5)">
+        <div class="question" onclick="get_answer(5)" onmouseover="orange('q5');move_cube('left')" onmouseout="neutral('q5');move_cube('right')">
             <div id="q5" class="q">
-              <h3>Do you provide additional support?</h3>
+                <h3>Do you provide additional support?</h3>
             </div>
             <div class="arrow">
-              <img id="arrow5"  src="images/icon-arrow-down.svg">
+                <img id="arrow5" src="images/icon-arrow-down.svg">
             </div>
-          </div>
-          <div class="answer">
+        </div>
+        <div class="answer">
             <div id="a5"></div>
-          </div>
-          <div class="line"></div>
         </div>
+        <div class="line"></div>
 
-        </div>
+    </div>
+</div>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://github.com/Ak-iu">Akiura</a>.
-  </div>
+</div>
 
 </body>
 </html>

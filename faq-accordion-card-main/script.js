@@ -1,5 +1,6 @@
 let a1, a2, a3, a4, a5 = false;
 
+
 function flip(id){
     document.getElementById(id).style='transform: scaleY(-1);'
 }
@@ -11,6 +12,37 @@ function black(id){
 }
 function grey(id){
     document.getElementById(id).style.color='hsl(240, 6%, 50%)';
+}
+function neutral(id){
+    if(id=='q1'){
+        if(a1) black(id)
+        else grey(id)
+    }
+    else if(id=='q2'){
+        if(a2) black(id)
+        else grey(id)
+    }
+    else if(id=='q3'){
+        if(a3) black(id)
+        else grey(id)
+    }
+    else if(id=='q4'){
+        if(a4) black(id)
+        else grey(id)
+    }
+    else if(id=='q5'){
+        if(a5) black(id)
+        else grey(id)
+    }
+
+
+}
+function orange(id){
+    document.getElementById(id).style.color='hsl(14, 88%, 65%)';
+}
+function move_cube(direction){
+    if(direction=='right') document.getElementById("img-box").style.marginLeft='-95px';
+    else document.getElementById("img-box").style.marginLeft='-125px';
 }
 
 

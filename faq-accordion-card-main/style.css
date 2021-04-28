@@ -1,13 +1,12 @@
-html{
-    width:100%;
-    height:100%;
-    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+html {
+    background-size: auto;
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
     font-family: 'Kumbh Sans', sans-serif;
     font-weight: 400;
     font-size: 12px;
     color: hsl(240, 6%, 50%);
-}
 
+}
 .box{
     min-height: 650px;
     display: flex;
@@ -15,26 +14,67 @@ html{
     background: white;
     margin: 160px 20px 20px 20px;
     border-radius: 30px;
-
 }
-.top{
+.mobile{
     display: flex;
     justify-content: center;
 }
-#desktop{
+.desktop{
+    display: none;
+
+}
+
+.mobile .img-desktop{
     position: absolute;
-    z-index:2;
+    z-index:3;
     margin-top:-110px;
     margin-left: -15px;
 }
-#bg{
-    z-index:1;
-    width: 250px;
-    margin-top:-140px
+.wrapper1{
+    overflow:hidden;
+    position: absolute;
+    left:15%;
+    margin-left: 5px;
+    margin-top: -60px;
+    align-self: center;
+    z-index: 2;
+
+}
+.desktop .wrapper1 .img-desktop{
+    margin-left: -75px;
+}
+.wrapper2{
+    overflow:hidden;
+    position: absolute;
+    left:15%;
+    width: 50%;
+    margin-left: 5px;
+    z-index: 1;
+    align-self: center;
+    height: 650px;
+
+}
+.desktop .wrapper2 .img-bg{
+    margin-top: -240px;
+    margin-left: -570px;
+    z-index: -1;
+}
+.img-box{
+    position: absolute;
+    align-self: center;
+    left:15%;
+    margin-top: 10px;
+    margin-left: -95px;
+    z-index: 2;
 }
 
+.q\&a{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    z-index:3;
+}
 .title{
-    margin-top: 10px;
     align-self: center;
 }
 .title h1{
@@ -42,16 +82,19 @@ html{
     font-weight: 700;
     font-size: 35px;
 }
-.text{
-    display: flex;
-    flex-flow: column;
-}
+
 .question{
+    width: 100%;
     margin-top: 10px;
     margin-bottom: 15px;
     display: flex;
     flex-flow: row;
 }
+
+.question:hover{
+    cursor:pointer;
+}
+
 .q{
     margin-left: 30px;
 }
@@ -74,11 +117,8 @@ html{
 .arrow{
     position: absolute;
     align-self:center;
-    right: 12%;
+    right: 55px;
 }
-
-
-
 .attribution {
     color:black;
     margin-top:80px;
@@ -89,4 +129,40 @@ html{
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 1100px) {
+    .box{
+        min-height: 650px;
+        display: flex;
+        flex-flow: row;
+        background: white;
+        margin: 200px 10% 160px 15%;
+        border-radius: 30px;
+        padding-left: 370px;
+    }
+
+    .mobile{
+        display: none;
+    }
+    .desktop{
+        display: flex;
+    }
+    .arrow{
+        position: absolute;
+        align-self:center;
+        right: 55px;
+        margin-right: 10%;
+    }
+    .title{
+        margin-top: 50px;
+        align-self: flex-start;
+        margin-left: 30px;
+
+    }
+    .q\&a{
+        display: flex;
+        flex-flow: column;
+        margin-left: 80px;
+    }
 }
