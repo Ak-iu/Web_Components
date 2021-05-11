@@ -314,6 +314,11 @@ footer .footer-section p{
 }
 
 @media only screen and (min-width: 910px){
+    #bg{
+        width: 2800px;
+        margin-top: -1100px;
+        margin-left: -200px;
+    }
     #logo-menu{
         display: none;
     }
@@ -404,8 +409,6 @@ footer .footer-section p{
         background:hsl(353, 100%, 62%);
         cursor: pointer;
     }
-
-
     #footer-flex{
         flex-flow: row;
         justify-content: space-between;
