@@ -31,9 +31,8 @@ function dark_font(id){
 }
 
 
-
 function menu_action(id){
-    if(id == 1){
+    if(id === 1){
         if (product_display) {
             hide_section('product-section');
             upright("product-arrow");
@@ -46,7 +45,7 @@ function menu_action(id){
         }
         product_display = !product_display;
     }
-    else if(id == 2){
+    else if(id === 2){
         if (company_display) {
             hide_section('company-section');
             upright("company-arrow")
@@ -60,7 +59,7 @@ function menu_action(id){
         }
         company_display = !company_display;
     }
-    else if(id == 3){
+    else if(id === 3){
         if (connect_display) {
             hide_section('connect-section');
             upright("connect-arrow")
@@ -76,7 +75,79 @@ function menu_action(id){
     }
     else
     {
-        if (menu_display == false) {
+        if (menu_display === false) {
+            show_menu();
+            menu_display = true;
+        } else {
+            hide_menu();
+            menu_display = false;
+        }
+    }
+}
+
+function menu_action_desktop(id){
+    if(id === 1){
+        if (product_display) {
+            hide_section('product-section-desktop');
+            upright("product-arrow-desktop");
+
+        }
+        else {
+            show_section('product-section-desktop');
+            upside("product-arrow-desktop");
+
+            hide_section('company-section-desktop');
+            upright("company-arrow-desktop")
+            hide_section('company-section-desktop');
+            upright("company-arrow-desktop")
+            company_display = false;
+            connect_display = false;
+        }
+        product_display = !product_display;
+    }
+    else if(id === 2){
+        if (company_display) {
+            hide_section('company-section-desktop');
+            upright("company-arrow-desktop")
+
+        }
+        else {
+            show_section('company-section-desktop');
+            upside("company-arrow-desktop");
+
+            hide_section('product-section-desktop');
+            upright("product-arrow-desktop");
+            hide_section('connect-section-desktop');
+            upright("connect-arrow-desktop")
+            product_display = false;
+            connect_display = false;
+        }
+        company_display = !company_display;
+    }
+    else if(id === 3){
+        if (connect_display) {
+            hide_section('connect-section-desktop');
+            upright("connect-arrow-desktop")
+
+        }
+        else {
+            show_section('connect-section-desktop');
+            upside("connect-arrow-desktop");
+
+            hide_section('company-section-desktop');
+            upright("company-arrow-desktop");
+            hide_section('product-section-desktop');
+            upright("product-arrow-desktop");
+            product_display = false;
+            company_display = false;
+
+        }
+        connect_display = !connect_display;
+
+    }
+    else
+    {
+        if (menu_display === false) {
             show_menu();
             menu_display = true;
         } else {

@@ -77,6 +77,11 @@ menu button{
     font-family: 'Ubuntu', sans-serif;
     outline: none;
 }
+#nav-buttons{
+    display: flex;
+    flex-flow: column;
+
+}
 #hb1{
     color:hsl(353, 100%, 62%);
     background: white;
@@ -95,6 +100,30 @@ menu button{
     background: linear-gradient(to right,hsl(13, 100%, 72%),hsl(353, 100%, 62%));
 
 }
+#hb1:hover{
+    background: hsl(353, 100%, 62%);
+    color:white;
+    border:0;
+    cursor:pointer;
+}
+#hb2:hover{
+    color:hsl(353, 100%, 62%);
+    background: white;
+    cursor:pointer;
+}
+#hb3:hover{
+    background: hsl(353, 100%, 62%);
+    color:white;
+    cursor:pointer;
+}
+#hb4:hover{
+    background: white;
+    color : hsl(353, 100%, 62%);
+    border: 1px solid hsl(353, 100%, 62%);
+    cursor:pointer;
+}
+
+
 .s1,.s3{
     display: flex;
     flex-flow: column;
@@ -128,13 +157,13 @@ menu button{
 #t2 h2,#t4 h2{
     font-weight: 700;
     font-size: 28px;
-    margin: 40px 0px 20px 0px;
-    padding: 0px 30px 0px 30px;
+    margin: 40px 0 20px 0;
+    padding: 0 30px 0 30px;
 }
 #t2 p,#t4 p,#t3 p{
     line-height: 30px;
     letter-spacing: 1px;
-    padding: 0px 20px 0px 20px;
+    padding: 0 20px 0 20px;
 }
 #mobile-editor,#mobile-laptop{
     width: 400px;
@@ -142,6 +171,9 @@ menu button{
 }
 #mobile-laptop{
     width: 500px;
+}
+.desktop-part{
+    display: none;
 }
 #bg-circle{
     width: 600px;
@@ -154,7 +186,7 @@ menu button{
 }
 .s2{
     background: linear-gradient(to bottom right,hsl(237, 17%, 21%),hsl(237, 23%, 32%));
-    border-radius: 0px 120px 0px 120px;
+    border-radius: 0 120px 0 120px;
     color: hsl(0, 0%, 100%);
     margin-bottom: 80px;
     margin-top: 300px;
@@ -173,9 +205,10 @@ menu{
     color:hsl(208, 49%, 24%);
     z-index: 3;
     top:120px;
+    right:15px;
 
     align-self: flex-end;
-    margin-right: 15px;
+
     width: 345px;
     align-items: center;
     justify-content: center;
@@ -187,9 +220,16 @@ menu{
 }
 menu .in{
     display: none;
-    word-spacing: 999999em;
+
+    flex-flow: column;
     margin-top: 10px;
     margin-bottom: 20px;
+
+    background: hsl(0, 0%, 94%);
+    border-radius: 5px;
+    padding: 10px 80px;
+    font-weight: 700;
+    color : hsl(208, 39%, 34%);
 }
 .menu-header{
     display: flex;
@@ -197,19 +237,24 @@ menu .in{
     text-align: center;
     justify-content: center;
     margin-bottom: 10px;
-
+    cursor:pointer;
+    user-select: none;
+}
+.in p:hover{
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+.menu-header h3:hover{
+    text-decoration: underline;
+    font-weight:bold;
+    cursor:pointer;
 }
 #menu-text{
     border-bottom: 1px solid lightgrey;
     margin: 25px;
 }
-.in{
-    background: hsl(0, 0%, 94%);
-    border-radius: 5px;
-    padding: 10px;
-    font-weight: 700;
-    color : hsl(208, 39%, 34%);
-}
+
 .arrow{
     width: 10px;
     height: 10px;
@@ -218,9 +263,6 @@ menu .in{
     margin-left: 10px;
 }
 footer{
-    display: flex;
-    flex-flow: column;
-    align-items: center;
     background: hsl(240, 10%, 16%);
     background-size: auto;
     border-top-right-radius: 120px;
@@ -228,29 +270,151 @@ footer{
     padding-top: 80px;
     color:hsl(0, 0%, 100%);
 }
+#footer-flex{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+}
+
 
 #footer-logo{
     margin-bottom: 80px;
 }
-footer h3{
+footer .footer-section h3{
     font-size: 21px;
+    align-self: center;
+    text-align: center;
     margin-bottom: 25px;
+    margin-top: 30px;
 }
-footer p{
+footer .footer-section p{
     word-spacing: 9999rem;
     text-align: center;
     line-height: 40px;
     color: hsl(240, 2%, 79%);
-    margin-top: 70px;
-    margin-bottom:60px;
+
     font-size: 20px;
+}
+.footer-section p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    user-select: none;
 }
 
 .attribution {
-    color:hsl(240, 2%, 79%);;
-    margin-bottom: 5px;
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+    color:hsl(240, 2%, 79%);
     font-size: 11px;
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 910px){
+    #logo-menu{
+        display: none;
+    }
+    #logo{
+        margin-left: 50px;
+    }
+    #mobile-menu{
+        display: none;
+    }
+    #hero-text{
+        margin-top: 50px;
+    }
+
+    menu{
+        width:80%;
+        display: flex;
+        flex-flow: row;
+        background: transparent;
+        color:white;
+        top:35px;
+        margin-right: 50px;
+        align-items: center;
+        justify-content: space-between;
+        text-align: start;
+        padding-bottom: 0;
+        border-radius: 0;
+        line-height: 0;
+        box-shadow: none;
+        margin-top: 10px;
+    }
+    #menu-text-desktop{
+        display: flex;
+        margin-left: 50px;
+        margin-top: 10px;
+    }
+    .section{
+        margin-left: 10px;
+        margin-right: 35px;
+    }
+    .arrow{
+        align-self: center;
+        margin-top: -6px;
+    }
+    menu .in{
+        position: absolute;
+        line-height: 50px;
+        text-align: center;
+        width: 200px;
+        display: none;
+        flex-flow: column;
+
+        margin-top: 20px;
+        margin-bottom: 0;
+
+        background: hsl(0, 0%, 94%);
+        border-radius: 5px;
+        padding: 10px;
+        font-weight: 700;
+        color : hsl(208, 39%, 34%);
+        user-select: none;
+    }
+
+    #nav-buttons-desktop{
+        display: flex;
+        flex-flow: row;
+        margin-top: -20px;
+    }
+    #nav-buttons-desktop button{
+        border:0;
+    }
+    #hb3-desktop{
+        background: transparent;
+        color: white;
+        margin-right: 10px;
+    }
+    #hb4-desktop{
+        background: white;
+        color: hsl(353, 100%, 62%);
+
+    }
+    #hb3-desktop:hover{
+        background: white;
+        color:hsl(353, 100%, 62%);
+        cursor:pointer;
+    }
+    #hb4-desktop:hover{
+        color : white;
+        background:hsl(353, 100%, 62%);
+        cursor: pointer;
+    }
+
+
+    #footer-flex{
+        flex-flow: row;
+        justify-content: space-between;
+        margin-left: 100px;
+        margin-right: 100px;
+        align-items: flex-start;
+    }
+    #footer-flex .footer-section h3{
+        margin-top: 10px;
+    }
+
 }
