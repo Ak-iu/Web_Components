@@ -7,6 +7,7 @@ html{
     font-family: 'Overpass', sans-serif;
     font-size: 16px;
     color:hsl(207, 13%, 34%);
+    overflow-x: hidden;
 }
 .hero{
     display: flex;
@@ -46,7 +47,7 @@ html{
     align-items: center;
     top:150px;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 22px;
 }
 #t1,#catch-line{
     text-align: center;
@@ -81,6 +82,9 @@ menu button{
     display: flex;
     flex-flow: column;
 
+}
+.s1-desktop,.s2-desktop,.s3-desktop{
+    display: none;
 }
 #hb1{
     color:hsl(353, 100%, 62%);
@@ -124,7 +128,7 @@ menu button{
 }
 
 
-.s1,.s3{
+.s1-mobile,.s3-mobile{
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -132,7 +136,7 @@ menu button{
     overflow:hidden;
 }
 
-#wrapper{
+.wrapper{
     display: flex;
     justify-content: center;
     width: 100%;
@@ -184,7 +188,7 @@ menu button{
     width: 370px;
     margin-top: -530px;
 }
-.s2{
+.s2-mobile{
     background: linear-gradient(to bottom right,hsl(237, 17%, 21%),hsl(237, 23%, 32%));
     border-radius: 0 120px 0 120px;
     color: hsl(0, 0%, 100%);
@@ -314,6 +318,7 @@ footer .footer-section p{
 }
 
 @media only screen and (min-width: 910px){
+    /* hero */
     #bg{
         width: 2800px;
         margin-top: -1100px;
@@ -331,7 +336,12 @@ footer .footer-section p{
     #hero-text{
         margin-top: 50px;
     }
-
+    .s1-mobile,.s2-mobile,.s3-mobile{
+        display: none;
+    }
+    .s1-desktop,.s2-desktop,.s3-desktop{
+        display: flex;
+    }
     menu{
         width:80%;
         display: flex;
@@ -354,6 +364,9 @@ footer .footer-section p{
         margin-left: 50px;
         margin-top: 10px;
     }
+    #hero-text h1{
+        font-size: 65px;
+    }
     .section{
         margin-left: 10px;
         margin-right: 35px;
@@ -369,10 +382,8 @@ footer .footer-section p{
         width: 200px;
         display: none;
         flex-flow: column;
-
         margin-top: 20px;
         margin-bottom: 0;
-
         background: hsl(0, 0%, 94%);
         border-radius: 5px;
         padding: 10px;
@@ -409,6 +420,128 @@ footer .footer-section p{
         background:hsl(353, 100%, 62%);
         cursor: pointer;
     }
+
+/* s1 */
+    .s1-desktop{
+        color: hsl(208, 49%, 24%);
+        margin: 100px 0 100px 0;
+        display: flex;
+        flex-flow: column;
+    }
+    #sn1-d{
+        align-self: center;
+    }
+    #sn1-d h1{
+        font-size: 50px;
+    }
+    #sub-s1-d{
+        margin: 80px 0 0 80px;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+    }
+    #t2-d{
+        display: flex;
+        flex-flow: column;
+        width: 50%;
+        height: 700px;
+        align-self: center;
+        justify-content: center;
+        font-size: 25px;
+    }
+    #t2-d h2{
+        margin-bottom: 50px;
+        margin-top: 30px;
+    }
+    #mobile-editor-d{
+        object-fit: cover;
+        width: 100%;
+        margin-top: -130px;
+        margin-right: -390px;
+        overflow-x: hidden;
+    }
+/* s2 */
+    .s2-desktop{
+        background: linear-gradient(to bottom right,hsl(237, 17%, 21%),hsl(237, 23%, 32%));
+        border-radius: 0 120px 0 120px;
+        color: hsl(0, 0%, 100%);
+        margin-bottom: 80px;
+        margin-top: 300px;
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding-bottom: 150px;
+
+       height: 300px;
+    }
+    #wrapper3{
+
+        display: flex;
+        overflow: hidden;
+        margin-top: 150px;
+        height: 450px;
+        border-bottom-left-radius: 120px;
+
+    }
+    #bg-circle-desktop{
+        width: 100%;
+        object-fit: cover;
+        margin-top: -340px;
+        margin-left: -170px;
+
+    }
+    #phones-desktop{
+        position: absolute;
+        margin-top: 70px;
+        left: 100px;
+    }
+    #s2-text{
+        position: absolute;
+        margin-left: 650px;
+        margin-right: 50px;
+
+    }
+    #sn2-d{
+
+        margin-top: 120px;
+        margin-bottom: 20px;
+    }
+    #sn2-d h1{
+        font-size: 35px;
+    }
+    #t3-d p{
+        font-size: 18px;
+    }
+/* s3 */
+    .s3-desktop{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+    }
+    #desktop-laptop{
+        width: 100%;
+        object-fit: cover;
+        margin-left: -300px;
+    }
+    #t4-d{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        margin-right: 50px;
+
+    }
+    #t4-d h2{
+        font-size: 35px;
+        margin-top: 25px;
+        margin-bottom: 30px;
+    }
+    #t4-d p{
+        font-size: 20px;
+    }
+
+
+/* footer */
     #footer-flex{
         flex-flow: row;
         justify-content: space-between;
