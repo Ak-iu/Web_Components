@@ -122,7 +122,7 @@ html {
     right: 55px;
 }
 .attribution {
-    position: absolute;
+    margin-top:100px;
     color:black;
     bottom: 10px;
     width:100%;
