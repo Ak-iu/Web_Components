@@ -1,5 +1,7 @@
 html {
     background-size: auto;
+    height: 100%;
+    overflow-x:hidden;
     background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
     font-family: 'Kumbh Sans', sans-serif;
     font-weight: 400;
@@ -120,9 +122,9 @@ html {
     right: 55px;
 }
 .attribution {
+    position: absolute;
     color:black;
-    margin-top:80px;
-    margin-bottom: 10px;
+    bottom: 10px;
     width:100%;
     font-size: 11px;
     text-align:center;
@@ -137,7 +139,7 @@ html {
         display: flex;
         flex-flow: row;
         background: white;
-        margin: 200px 10% 160px 15%;
+        margin: 100px 10% 160px 15%;
         border-radius: 30px;
         padding-left: 370px;
     }

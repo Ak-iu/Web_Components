@@ -84,7 +84,9 @@ body{
 }
 
 .attribution {
+    position: absolute;
     color:black;
+    bottom: 5px;
     margin-top:100px;
     margin-bottom: 10px;
     width:100%;
